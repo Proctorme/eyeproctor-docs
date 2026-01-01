@@ -1,0 +1,69 @@
+site_name: Eye By Proctorme
+site_url: https://mydomain.org
+theme:
+  icon:
+    admonition:
+      warning: material/alert-circle
+  logo: assets/logo.png
+  favicon: assets/favicon.ico
+  name: material
+  font:
+    text: Merriweather Sans
+    code: Red Hat Mono
+  palette:
+      # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+      primary: indigo
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to light mode
+  features:
+    - content.code.annotate
+nav:
+  - introduction: index.md
+  - Installation: installation.md
+  - Api key: api-key.md
+  - Getting Started: quick-start.md  
+  - Configuration: configuration.md
+  - Api methods: api-methods.md
+  - Events: events.md
+  - PayLoad Types: payload-types.md
+  - Browser Support: browser-support.md
+  - License: license.md
+watch:
+  - docs
+markdown_extensions:
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+
+
+  
+
