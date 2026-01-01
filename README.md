@@ -1,19 +1,14 @@
-# Eye By Proctorme Documentation
+# Eye By Proctorme Documentation Project
 
-**Eye By Proctorme** is a lightweight, privacy-focused proctoring widget designed for modern online assessments. It provides real-time AI-powered monitoring with minimal setup and maximum transparency.
+This repository contains the complete documentation for **Eye By Proctorme**, a lightweight, privacy-focused proctoring widget designed for modern online assessments.
 
-## Overview
+## About This Documentation Project
 
-Eye By Proctorme is a browser-based proctoring solution that:
-- Runs entirely in the browser
-- Integrates via a single script tag
-- Provides real-time AI-powered monitoring
-- Offers face presence & multiple face detection
-- Includes audio activity monitoring
-- Features tab focus tracking
-- Emits real-time events for integration
+This is a **documentation-only repository** that houses all the guides, API references, and usage instructions for the Eye By Proctorme proctoring solution. The documentation is built using MkDocs and deployed automatically via GitHub Actions.
 
-## Table of Contents
+## Documentation Structure
+
+The documentation is organized into the following sections:
 
 ### Getting Started
 - [Installation](docs/installation.md) - How to install the widget with a single script tag
@@ -22,7 +17,7 @@ Eye By Proctorme is a browser-based proctoring solution that:
 
 ### Core Features
 - [API Key Management](docs/api-key.md) - How to find and manage your API key with domain restrictions
-- [API Methods](docs/api-methods.md) - Available methods: `init()`, `on()`, `endProctorme()`
+- [API Methods](docs/api-methods.md) - Available methods: `init()`, `on()`, `endProctoring()`
 - [Events](docs/events.md) - Event-driven architecture and available events
 - [Payload Types](docs/payload-types.md) - Structure of data returned by events
 
@@ -31,55 +26,45 @@ Eye By Proctorme is a browser-based proctoring solution that:
 - [Webhooks](docs/webhooks.md) - Real-time notifications for suspicious events
 - [License](docs/license.md) - Commercial licensing terms
 
-## Key Capabilities
+## Building the Documentation
 
-- **Face presence & multiple face detection**
-- **Periodic face recognition snapshots**
-- **Audio activity monitoring**
-- **Tab focus tracking**
-- **Event-driven integration API**
+This documentation site is built using MkDocs. To build and serve it locally:
 
-## Integration Process
+1. Install MkDocs and the material theme:
+   ```bash
+   pip install mkdocs mkdocs-material
+   ```
 
-1. **Install** the widget by adding a single script tag to your HTML
-2. **Load** the widget using `LoadProctormeWidget()`
-3. **Configure** your session with required parameters
-4. **Initialize** the widget with your configuration
-5. **Listen** to events for real-time monitoring
-6. **End** the session when complete
+2. Serve the documentation locally:
+   ```bash
+   mkdocs serve
+   ```
 
-## Configuration Requirements
+3. Build the static site:
+   ```bash
+   mkdocs build
+   ```
 
-The widget requires a configuration object with the following required fields:
-- `apiKey` - Your organization's API key
-- `assessmentId` - Unique identifier for the assessment
-- `assessmentTitle` - Human-readable title of the assessment
-- `candidateId` - Unique identifier for the candidate
-- `candidateEmail` - Candidate's email address
-- `candidateFirstName` and `candidateLastName` - Candidate's name
-- `institutionName` - Name of the institution
-- `examDuration` - Duration of the exam in seconds
+## Deployment
 
-## Events
-
-The widget emits various events including:
-- `STARTED` - When proctoring begins
-- `END_PROCTORING` - When proctoring ends
-- `FACE_ABSENCE` - When no face is detected
-- `MULTIPLE_FACE` - When multiple faces are detected
-- `SOUND_DETECTED` - When sound is detected
-- `TAB_NOT_FOCUS` - When candidate switches tabs
-- `PERIODIC_SNAPSHOT` - Periodic face snapshots
-
-## License
-
-Eye By Proctorme is commercial software provided under a proprietary, pay-per-use license. Access requires registration, a valid API key, and domain restrictions.
-
-## GitHub Workflow
-
-This repository includes a GitHub Actions workflow for deploying documentation to production:
-- Triggers on pushes to the main branch
+The documentation is automatically deployed via GitHub Actions when changes are pushed to the main branch. The workflow:
 - Builds the documentation with MkDocs
 - Deploys to an S3 bucket
 - Invalidates CloudFront cache
 - Uses configurable variables for bucket name and other settings
+
+## Repository Structure
+
+- `docs/` - Contains all the markdown documentation files
+- `mkdocs.yml` - Configuration for the MkDocs site
+- `.github/workflows/` - GitHub Actions workflow for deployment
+- `requirements.txt` - Python dependencies for building the documentation
+- `site/` - Built documentation site (excluded from git by .gitignore)
+
+## License
+
+The documentation in this repository is provided as part of the Eye By Proctorme commercial software documentation. For information about the software licensing, see the [License documentation](docs/license.md).
+
+## Support
+
+For documentation issues or suggestions, please contact the Eye By Proctorme team.
