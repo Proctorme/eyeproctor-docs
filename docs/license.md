@@ -90,5 +90,5 @@ Commercial terms may vary based on agreement.
 
 For pricing, enterprise licensing, or legal inquiries:
 
-**Email:** support@proctorme.com  
+**Email:** hello@eyeproctor.com  
 **Website:** https://proctorme.com

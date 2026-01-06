@@ -5,7 +5,7 @@ This guide will help you **integrate Eye By Proctorme** into your project and st
 
 !!! warning "Tip"
 
-    Ensure the installation script—or, better still, the page DOM—is loaded before calling `LoadProctormeWidget()`.
+    Ensure the installation script—or, better still, the page DOM—is loaded before calling `LoadEyeWidget()`.
 
 
 ## Load the Widget
@@ -13,7 +13,7 @@ This guide will help you **integrate Eye By Proctorme** into your project and st
 After adding the script, the widget exposes a **global function**:
 
 ```javascript
-const widget = await LoadProctormeWidget();
+const widget = await LoadEyeWidget();
 ```
 
 This function **returns a Promise**, so you should always use `async/await` or `.then()` to handle it.
@@ -105,7 +105,7 @@ Here’s the **complete workflow**:
 async function startProctoring() {
   try {
     // Load the widget
-    const widget = await LoadProctormeWidget();
+    const widget = await LoadEyeWidget();
 
     // Event listeners
     widget.on("STARTED", () => console.log("🎬 Proctoring started"));

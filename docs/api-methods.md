@@ -2,7 +2,7 @@
 
 Eye By Proctorme exposes a **small, event-driven JavaScript API** that allows you to initialize proctoring, listen to events, and manually end a session.
 
-All interaction happens through the **widget instance** returned by `LoadProctormeWidget()`.
+All interaction happens through the **widget instance** returned by `LoadEyeWidget()`.
 
 ---
 
@@ -11,11 +11,11 @@ All interaction happens through the **widget instance** returned by `LoadProctor
 Before calling any API method, you must load the widget:
 
 ```ts
-const widget = await LoadProctormeWidget();
+const widget = await LoadEyeWidget();
 ```
 
 !!! info "Async loading"
-    `LoadProctormeWidget()` returns a Promise.
+    `LoadEyeWidget()` returns a Promise.
     Always use `await` or `.then()` before accessing widget methods.
 
 ---

@@ -1,10 +1,10 @@
 # Installation
 
-Eye By Proctorme is delivered as a lightweight browser-based widget.  
+Eye By Proctorme is delivered as a lightweight browser-based widget.
 Installation requires **adding a single script tag** to your application.
 
 ```html
-<script src="https://widget.proctorme.com/proctormewidget-widget-init.js"></script>
+<script src="https://widget.eyeproctor.com/eye-widget-init.js"></script>
 ```
 
 ## Where to place the script
@@ -25,7 +25,7 @@ For most applications, placing it before </body> is recommended to avoid blockin
   </head>
   <body>
     <!-- Your application markup -->
-    <script src="https://widget.proctorme.com/proctormewidget-widget-init.js"></script>     
+    <script src="https://widget.eyeproctor.com/eye-widget-init.js"></script>
   </body>
 </html>
 ```
@@ -34,9 +34,9 @@ For most applications, placing it before </body> is recommended to avoid blockin
 
 - The widget loads asynchronously
 - It does not block your application
-- Once loaded, it exposes a global function `LoadProctormeWidget()`.
+- Once loaded, it exposes a global function `LoadEyeWidget()`.
 
-This function returns a Promise that resolves to the Proctorme widget instance.
+This function returns a Promise that resolves to the Eye By Proctorme widget instance.
 
 
 [Quick start →](quick-start.md){ .md-button }
